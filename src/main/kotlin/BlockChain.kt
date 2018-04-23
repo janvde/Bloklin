@@ -77,7 +77,8 @@ object BlockChain {
     private fun isValidProof(previousPow: Int, proof: Int): Boolean {
         val guess = previousPow * proof
         val guessHash = HashUtil.sha256(guess.toString())
-        return guessHash.endsWith('0')
+        val suffix = "0"
+        return guessHash.endsWith(suffix)
     }
 
 

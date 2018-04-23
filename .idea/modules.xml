@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Bloklin.iml" filepath="$PROJECT_DIR$/Bloklin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bloklin.iml" filepath="$PROJECT_DIR$/.idea/modules/bloklin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bloklin_main.iml" filepath="$PROJECT_DIR$/.idea/modules/bloklin_main.iml" group="bloklin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bloklin_test.iml" filepath="$PROJECT_DIR$/.idea/modules/bloklin_test.iml" group="bloklin" />
     </modules>
   </component>
 </project>
