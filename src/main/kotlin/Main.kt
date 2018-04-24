@@ -6,4 +6,6 @@ fun main(args: Array<String>) {
         blockChain.addBlock(block)*/
         blockChain.mineBlock("some data")
     }
+
+    println("is chain valid: "+blockChain.isChainValid())
 }

@@ -1,3 +1,4 @@
+import com.sun.org.apache.xpath.internal.operations.Bool
 import java.util.*
 
 class Block(
@@ -14,8 +15,12 @@ class Block(
     //calculate hash of this block
     private fun calculateHash(): String = HashUtil.sha256(previousHash + data + timeStamp + nonce)
 
+    fun isGenesisBlock(): Boolean {
+        return index == 0
+    }
 
     override fun toString(): String {
-        return "Block: ${hash} ${data.toString()}"
+        return "Block(index=$index, previousHash='$previousHash', data=$data, timeStamp=$timeStamp, nonce=$nonce, hash='$hash')"
     }
+
 }

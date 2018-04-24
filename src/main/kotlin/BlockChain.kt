@@ -48,7 +48,14 @@ object BlockChain {
         return chain.last()
     }
 
+    /**
+     * check if the chain is valid
+     * loop over chain to verify if each block is valid
+     */
     fun isChainValid(): Boolean {
+        for (block: Block in chain) {
+            if (isBlockValid(block).not()) return false
+        }
         return true
     }
 
@@ -59,12 +66,22 @@ object BlockChain {
      * 3. checking if the indexes are sequential
      */
     fun isBlockValid(block: Block): Boolean {
-        val previousPow = lastBlock().nonce
-        val validProof = isValidProof(block.nonce, previousPow)
-        val sequantialHashes = block.previousHash.equals(lastBlock().hash)
-        val sequantialIndexes = block.index == lastBlock().index + 1
+        //genesis block is always valid, but doesnt have a valid parent block
+        if(block.isGenesisBlock()) return true
 
-        return validProof && sequantialHashes && sequantialIndexes
+        val previousBlock = chain.get(block.index -1)
+        val previousPow = previousBlock.nonce
+
+        //check for valid proof
+        if (isValidProof(block.nonce, previousPow).not()) return false
+
+        //check equal hashes
+        if (block.previousHash.equals(previousBlock.hash).not()) return false
+
+        //check incremented index
+        if (block.index != previousBlock.index + 1) return false
+
+        return true
     }
 
 
@@ -77,7 +94,7 @@ object BlockChain {
     private fun isValidProof(previousPow: Int, proof: Int): Boolean {
         val guess = previousPow * proof
         val guessHash = HashUtil.sha256(guess.toString())
-        val suffix = "0"
+        val suffix = "000"
         return guessHash.endsWith(suffix)
     }
 
