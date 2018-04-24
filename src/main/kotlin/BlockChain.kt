@@ -5,7 +5,7 @@
  */
 object BlockChain {
     private val chain = mutableListOf<Block>()
-    private var dificulty = 1;
+    private var dificulty = 3
 
     init {
         /**
@@ -94,7 +94,7 @@ object BlockChain {
     private fun isValidProof(previousPow: Int, proof: Int): Boolean {
         val guess = previousPow * proof
         val guessHash = HashUtil.sha256(guess.toString())
-        val suffix = "000"
+        val suffix = DificultyUtil.getDificultyString(dificulty)
         return guessHash.endsWith(suffix)
     }
 
@@ -104,7 +104,6 @@ object BlockChain {
      * checks which [Int] is a valid proof by increasing untill one is found
      *
      * todo don't always start at proof = 1
-     * todo add dificulty
      */
     private fun pow(previousPow: Int): Int {
         println("start mining block " + lastBlock().index.plus(1))
