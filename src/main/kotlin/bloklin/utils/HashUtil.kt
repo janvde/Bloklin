@@ -1,4 +1,4 @@
-package utils
+package bloklin.utils
 
 import java.security.MessageDigest
 

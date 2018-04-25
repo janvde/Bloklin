@@ -1,4 +1,4 @@
-package nodes
+package bloklin.nodes
 
 object NodesPool {
     val nodes = mutableSetOf<Node>() //set of nodes in the pool

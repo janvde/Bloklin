@@ -1,4 +1,4 @@
-package utils
+package bloklin.utils
 
 object DificultyUtil {
     fun getDificultyString(dificulty: Int): String {

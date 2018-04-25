@@ -1,9 +1,9 @@
-
+package bloklin
 import io.ktor.application.Application
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
-import nodes.Node
-import nodes.NodesPool
+import bloklin.nodes.Node
+import bloklin.nodes.NodesPool
 
 fun main(args: Array<String>) {
     val blockChain = BlockChain
@@ -13,10 +13,10 @@ fun main(args: Array<String>) {
     nodes.addNode(Node("127.0.0.1", 8080))
 
     for (i in 1..5) {
-        /*val block = Block(i, blockChain.lastBlock().hash, i, 0, nonce = 0)
-        blockChain.addBlock(block)*/
-        blockChain.mineBlock("some data")
+        /*val block = bloklin.Block(i, bloklin.getBlockChain.lastBlock().hash, i, 0, nonce = 0)
+        bloklin.getBlockChain.addBlock(block)*/
+        BlockChain.mineBlock("some data")
     }
 
-    println("is chain valid: "+blockChain.isChainValid())
+    println("is chain valid: "+ BlockChain.isChainValid())
 }

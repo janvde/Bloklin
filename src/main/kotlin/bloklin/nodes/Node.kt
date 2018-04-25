@@ -1,4 +1,4 @@
-package nodes
+package bloklin.nodes
 
 import com.google.gson.annotations.SerializedName
 

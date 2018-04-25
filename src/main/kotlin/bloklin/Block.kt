@@ -1,4 +1,6 @@
-import utils.HashUtil
+package bloklin
+
+import bloklin.utils.HashUtil
 import java.util.*
 
 class Block(

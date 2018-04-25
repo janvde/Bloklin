@@ -1,5 +1,9 @@
-import utils.DificultyUtil
-import utils.HashUtil
+package bloklin
+
+import bloklin.nodes.Node
+import bloklin.nodes.NodesPool
+import bloklin.utils.DificultyUtil
+import bloklin.utils.HashUtil
 
 /**
  * @author Jan
@@ -113,5 +117,15 @@ object BlockChain {
         }
 
         return proof
+    }
+
+
+    private fun consensus() {
+        val nodesPool = NodesPool
+
+        for (node: Node in nodesPool.nodes){
+            //fetch chain from node
+            //compare length with our chain
+        }
     }
 }
