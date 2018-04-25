@@ -4,7 +4,7 @@ import java.util.*
 class Block(
         val index: Int, //index of the block in the chain. Increments with each block.
         val previousHash: String, //hash of the previous block header
-        val data: Any, //any data we want to store in this block
+        var data: Any, //any data we want to store in this block
         val timeStamp: Long = Date().time, //unix timestamp of this block
         var nonce: Int = 1
 ) {

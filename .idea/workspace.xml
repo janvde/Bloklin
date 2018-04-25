@@ -3,18 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="f3f13d24-fd87-479c-b067-03801c54ddd7" name="Default" comment="check chain validity">
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/Server.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/TamperingTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/bloklin_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/bloklin_main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/bloklin_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/bloklin_test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Block.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Block.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/BlockChain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/BlockChain.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/DificultyUtil.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/HashUtil.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/DificultyUtilTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/DificultyUtilTest.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -43,11 +39,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BlockChain.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BlockChain.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/BlockChain.kt">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="16" column="93" selection-start-line="16" selection-start-column="93" selection-end-line="16" selection-end-column="93" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TamperingTest.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/kotlin/TamperingTest.kt">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="263">
-              <caret line="109" column="19" selection-start-line="109" selection-start-column="19" selection-end-line="109" selection-end-column="19" />
+              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+              <folding>
+                <element signature="e#1#46#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,8 +63,8 @@
       <file leaf-file-name="Block.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/Block.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+            <state relative-caret-position="45">
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -64,17 +72,20 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+            <state relative-caret-position="160">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Server.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Server.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/Server.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            <state relative-caret-position="254">
+              <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+              <folding>
+                <element signature="e#1#407#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,8 +93,8 @@
       <file leaf-file-name="DificultyUtilTest.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/kotlin/DificultyUtilTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+            <state relative-caret-position="30">
+              <caret line="4" selection-start-line="4" selection-end-line="32" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -91,8 +102,11 @@
       <file leaf-file-name="Main.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+            <state relative-caret-position="105">
+              <caret line="7" column="102" selection-start-line="7" selection-start-column="102" selection-end-line="7" selection-end-column="102" />
+              <folding>
+                <element signature="e#0#116#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -304,9 +318,9 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="6098172466000" />
+        <entry key="$PROJECT_DIR$" value="6098222786000" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="2403126281" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="3090547990" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2083459160" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="4051355680" />
       </map>
@@ -524,17 +538,18 @@
         <option value="$PROJECT_DIR$/src/test/kotlin/StringUtilsTest.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/DificultyUtil.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/DificultyUtilTest.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/Block.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/TamperingTest.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/BlockChain.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/Main.kt" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/kotlin/Server.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/Main.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/Block.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/BlockChain.kt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2213" />
-    <option name="y" value="-275" />
+    <option name="x" value="-2207" />
+    <option name="y" value="-440" />
     <option name="width" value="1680" />
     <option name="height" value="1027" />
   </component>
@@ -620,6 +635,23 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DificultyUtilTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TamperingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bloklin_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TamperingTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -734,11 +766,13 @@
       <item itemvalue="JUnit.DificultyUtilTest" />
       <item itemvalue="Kotlin.MainKt" />
       <item itemvalue="Kotlin.ServerKt" />
+      <item itemvalue="JUnit.TamperingTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Kotlin.ServerKt" />
+        <item itemvalue="JUnit.TamperingTest" />
         <item itemvalue="JUnit.DificultyUtilTest" />
       </list>
     </recent_temporary>
@@ -783,9 +817,15 @@
     <history-entry file="DificultyUtilTest - 2018.04.24 at 21h 44m 27s.xml">
       <configuration name="DificultyUtilTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TamperingTest - 2018.04.25 at 13h 44m 39s.xml">
+      <configuration name="TamperingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TamperingTest - 2018.04.25 at 13h 46m 43s.xml">
+      <configuration name="TamperingTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2213" y="-275" width="1680" height="1027" extended-state="0" />
+    <frame x="-2207" y="-440" width="1680" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -793,11 +833,12 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.46379852" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.46379852" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3298585" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2809524" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2809524" />
+      <window_info anchor="bottom" id="Build" order="8" weight="0.3298585" />
       <window_info anchor="right" id="Gradle" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -808,7 +849,6 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Build" order="8" weight="0.3298585" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
@@ -843,6 +883,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="e#1#407#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -857,6 +900,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#116#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -979,13 +1025,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/DificultyUtilTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/utils/DificultyUtil.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -993,38 +1032,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/DificultyUtilTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+        <state relative-caret-position="30">
+          <caret line="4" selection-start-line="4" selection-end-line="32" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/TamperingTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Server.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="263">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding>
+            <element signature="e#1#46#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/Block.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        <state relative-caret-position="45">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/BlockChain.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="109" column="19" selection-start-line="109" selection-start-column="19" selection-end-line="109" selection-end-column="19" />
+        <state relative-caret-position="218">
+          <caret line="16" column="93" selection-start-line="16" selection-start-column="93" selection-end-line="16" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="102" selection-start-line="7" selection-start-column="102" selection-end-line="7" selection-end-column="102" />
+          <folding>
+            <element signature="e#0#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Server.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+          <folding>
+            <element signature="e#1#407#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

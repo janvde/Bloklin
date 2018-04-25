@@ -7,14 +7,14 @@ import utils.HashUtil
  * Blockchain singleton
  */
 object BlockChain {
-    private val chain = mutableListOf<Block>()
+    val chain = mutableListOf<Block>()
     private var dificulty = 3
 
     init {
         /**
          * add a genesis block to the chain with hardcoded data in it
          */
-        val genesisBlock = Block(0, HashUtil.sha256("genesis block"), "some data", nonce = 5)
+        val genesisBlock = Block(0, HashUtil.sha256("genesis block"), "some data", nonce = 1)
         chain.add(genesisBlock)
     }
 
@@ -107,7 +107,7 @@ object BlockChain {
      */
     private fun proofOfWork(block: Block): Int {
         println("start mining block " + lastBlock().index.plus(1))
-        var proof: = 1
+        var proof = 1
         while (isValidProof(block, proof).not()) {
             proof++
         }
