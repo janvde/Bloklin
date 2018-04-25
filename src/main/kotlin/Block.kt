@@ -1,4 +1,4 @@
-import com.sun.org.apache.xpath.internal.operations.Bool
+import utils.HashUtil
 import java.util.*
 
 class Block(
@@ -6,14 +6,16 @@ class Block(
         val previousHash: String, //hash of the previous block header
         val data: Any, //any data we want to store in this block
         val timeStamp: Long = Date().time, //unix timestamp of this block
-        val nonce: Int
+        var nonce: Int = 1
 ) {
 
     val hash = calculateHash()
 
 
     //calculate hash of this block
-    private fun calculateHash(): String = HashUtil.sha256(previousHash + data + timeStamp + nonce)
+    fun calculateHash(): String = HashUtil.sha256(previousHash + data + timeStamp + nonce)
+
+
 
     fun isGenesisBlock(): Boolean {
         return index == 0

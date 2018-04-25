@@ -1,3 +1,6 @@
+import utils.DificultyUtil
+import utils.HashUtil
+
 /**
  * @author Jan
  *
@@ -11,7 +14,7 @@ object BlockChain {
         /**
          * add a genesis block to the chain with hardcoded data in it
          */
-        val genesisBlock = Block(0, HashUtil.sha256("genesis block"), "some data", nonce = 1)
+        val genesisBlock = Block(0, HashUtil.sha256("genesis block"), "some data", nonce = 5)
         chain.add(genesisBlock)
     }
 
@@ -19,15 +22,18 @@ object BlockChain {
     /**
      * mine a new block with given data in it
      */
-    fun mineBlock(data: Any) {
+    fun mineBlock(data: Any): Block {
         val lastBlock = lastBlock()
 
         val lastBlockIndex = lastBlock.index
         val previousHash = lastBlock.hash
-        val proofOfWork = pow(lastBlock.nonce)
-        val block = Block(lastBlockIndex + 1, previousHash, data, nonce = proofOfWork)
+
+        val block = Block(lastBlockIndex + 1, previousHash, data)
+        val pow = proofOfWork(block)
+        block.nonce = pow
 
         addBlock(block)
+        return block
     }
 
     /**
@@ -36,7 +42,7 @@ object BlockChain {
     private fun addBlock(block: Block) {
         if (isBlockValid(block)) {
             chain.add(block)
-            println("Block mined! ${block.hash} ${block.data}")
+            println("Block mined! ${block.hash} ${block.nonce}")
         }
     }
 
@@ -67,13 +73,12 @@ object BlockChain {
      */
     fun isBlockValid(block: Block): Boolean {
         //genesis block is always valid, but doesnt have a valid parent block
-        if(block.isGenesisBlock()) return true
+        if (block.isGenesisBlock()) return true
 
-        val previousBlock = chain.get(block.index -1)
-        val previousPow = previousBlock.nonce
+        val previousBlock = chain.get(block.index - 1)
 
         //check for valid proof
-        if (isValidProof(block.nonce, previousPow).not()) return false
+        if (isValidProof(block, block.nonce).not()) return false
 
         //check equal hashes
         if (block.previousHash.equals(previousBlock.hash).not()) return false
@@ -86,29 +91,24 @@ object BlockChain {
 
 
     /**
-     * check if a proof is valid
-     * 1. multiply previous and current proof
-     * 2. hash the result and convert to string
-     * 3. verify if the hash ends with a zero
+     * check if proof of a block is valid
+     * check if the block with a certain nonce results in a hash which ends with an amount of zeros
      */
-    private fun isValidProof(previousPow: Int, proof: Int): Boolean {
-        val guess = previousPow * proof
-        val guessHash = HashUtil.sha256(guess.toString())
+    private fun isValidProof(block: Block, proof: Int): Boolean {
         val suffix = DificultyUtil.getDificultyString(dificulty)
-        return guessHash.endsWith(suffix)
+        block.nonce = proof
+        return (block.calculateHash().endsWith(suffix))
     }
 
 
     /**
      * simple proof of work mechanism
-     * checks which [Int] is a valid proof by increasing untill one is found
-     *
-     * todo don't always start at proof = 1
+     * increases none until proof is valid
      */
-    private fun pow(previousPow: Int): Int {
+    private fun proofOfWork(block: Block): Int {
         println("start mining block " + lastBlock().index.plus(1))
-        var proof: Int = 1
-        while (isValidProof(previousPow, proof).not()) {
+        var proof: = 1
+        while (isValidProof(block, proof).not()) {
             proof++
         }
 
