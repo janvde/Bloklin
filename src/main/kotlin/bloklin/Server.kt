@@ -21,7 +21,6 @@ import io.ktor.routing.post
 
 
 
-val blockChain = BlockChain
 val nodesPool = NodesPool
 
 fun Application.module() {
@@ -37,16 +36,16 @@ fun Application.module() {
             call.respondText("Bloklin server", ContentType.Application.Json)
         }
         get("/mine") {
-            val block = BlockChain.mineBlock("data")
+            val block = Bloklin.mineBlock("data")
             call.respond(block)
         }
         get("/chain") {
-            val chain = BlockChain.chain
+            val chain = Bloklin.blockChain
             call.respond(chain)
         }
         get("/nodes/resolve") {
-            blockChain.consensus()
-            call.respond(blockChain.chain)
+            Bloklin.consensus()
+            call.respond(Bloklin.blockChain)
         }
         post("/nodes/register") {
             val jsonbody = call.receiveText()

@@ -15,9 +15,10 @@ fun main(args: Array<String>) {
     embeddedServer(Netty, port, watchPaths = listOf("ServerKt"), module = Application::module).start()
     //NodesPool.addNode(Node("127.0.0.1", port))
 
-    /*for (i in 1..5) {
-        BlockChain.mineBlock("some data")
-    }*/
+    for (i in 1..5) {
+        //BlockChain.mineBlock("some data")
+        Bloklin.mineBlock("some datas")
+    }
 
-    println("is chain valid: " + BlockChain.isChainValid(BlockChain.chain))
+    println("is chain valid: " + Bloklin.blockChain.isChainValid())
 }
