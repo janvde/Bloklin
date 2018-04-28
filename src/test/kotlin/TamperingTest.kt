@@ -9,7 +9,7 @@ class TamperingTest {
         val blockchain = BlockChain
         blockchain.mineBlock("block1")
         blockchain.mineBlock("block2")
-        val test = blockchain.isChainValid()
+        val test = blockchain.isChainValid(blockchain.chain)
 
 
         val expected = true
@@ -22,7 +22,7 @@ class TamperingTest {
         blockchain.mineBlock("block1")
         blockchain.mineBlock("block2")
         blockchain.chain.get(1).data = "tampered!"
-        val test = blockchain.isChainValid()
+        val test = blockchain.isChainValid(blockchain.chain)
 
 
         val expected = false

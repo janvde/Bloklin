@@ -2,8 +2,10 @@ package bloklin
 
 import bloklin.nodes.Node
 import bloklin.nodes.NodesPool
+import bloklin.remote.NodeServiceFactory
 import bloklin.utils.DificultyUtil
 import bloklin.utils.HashUtil
+import io.reactivex.rxkotlin.subscribeBy
 
 /**
  * @author Jan
@@ -11,14 +13,14 @@ import bloklin.utils.HashUtil
  * Blockchain singleton
  */
 object BlockChain {
-    val chain = mutableListOf<Block>()
+    var chain = mutableListOf<Block>()
     private var dificulty = 3
 
     init {
         /**
          * add a genesis block to the chain with hardcoded data in it
          */
-        val genesisBlock = Block(0, HashUtil.sha256("genesis block"), "some data", nonce = 1)
+        val genesisBlock = Block(0, HashUtil.sha256("genesis block"), "genesis data", nonce = 1)
         chain.add(genesisBlock)
     }
 
@@ -44,7 +46,7 @@ object BlockChain {
      * add a block to the chain
      */
     private fun addBlock(block: Block) {
-        if (isBlockValid(block)) {
+        if (isBlockValid(chain, block)) {
             chain.add(block)
             println("Block mined! ${block.hash} ${block.nonce}")
         }
@@ -62,9 +64,9 @@ object BlockChain {
      * check if the chain is valid
      * loop over chain to verify if each block is valid
      */
-    fun isChainValid(): Boolean {
+    fun isChainValid(chain: List<Block>): Boolean {
         for (block: Block in chain) {
-            if (isBlockValid(block).not()) return false
+            if (isBlockValid(chain, block).not()) return false
         }
         return true
     }
@@ -75,7 +77,7 @@ object BlockChain {
      * 2. checking if the the hashes are sequential
      * 3. checking if the indexes are sequential
      */
-    fun isBlockValid(block: Block): Boolean {
+    fun isBlockValid(chain: List<Block>, block: Block): Boolean {
         //genesis block is always valid, but doesnt have a valid parent block
         if (block.isGenesisBlock()) return true
 
@@ -120,12 +122,33 @@ object BlockChain {
     }
 
 
-    private fun consensus() {
+    /**
+     * replace our chain with the longest chain in the network
+     * todo should be chain with the most pow instead of the longest
+     */
+    fun consensus() {
         val nodesPool = NodesPool
 
-        for (node: Node in nodesPool.nodes){
+        for (node: Node in nodesPool.nodes) {
             //fetch chain from node
-            //compare length with our chain
+
+            val url = "${node.ip}:${node.port}"
+            val nodeService = NodeServiceFactory.makeNodeService(url)
+            nodeService.getChain()
+                    .subscribeBy(
+                            onSuccess = {
+                                //if their chain is longer replace our chain
+                                if (chain.size < it.size) {
+                                    if (isChainValid(it)) {
+                                        this.chain = chain
+                                        println("our chain is replaced by longer chain of $url")
+                                    } else {
+                                        println("chain of $url is not valid")
+                                    }
+                                }
+                            },
+                            onError = { it.printStackTrace() }
+                    )
         }
     }
 }

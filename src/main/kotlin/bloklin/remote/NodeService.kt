@@ -2,15 +2,15 @@ package bloklin.remote
 
 import bloklin.Block
 import bloklin.nodes.Node
-import io.reactivex.Observable
+import io.reactivex.Single
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface NodeService {
     @GET("/chain")
-    fun getChain(): Observable<List<Block>>
+    fun getChain(): Single<List<Block>>
 
     @POST("/nodes/register")
-    fun registerNodes(@Body nodes: List<Node>): Observable<List<Node>>
+    fun registerNodes(@Body nodes: List<Node>): Single<List<Node>>
 }

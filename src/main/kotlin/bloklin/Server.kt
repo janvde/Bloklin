@@ -45,8 +45,8 @@ fun Application.module() {
             call.respond(chain)
         }
         get("/nodes/resolve") {
-            val chain = BlockChain.chain
-            call.respond(chain)
+            blockChain.consensus()
+            call.respond(blockChain.chain)
         }
         post("/nodes/register") {
             val jsonbody = call.receiveText()

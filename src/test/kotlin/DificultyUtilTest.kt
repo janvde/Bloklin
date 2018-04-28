@@ -1,6 +1,6 @@
+import bloklin.utils.DificultyUtil
 import org.junit.Assert
 import org.junit.Test
-import bloklin.utils.DificultyUtil
 
 class DificultyUtilTest {
     @Test
