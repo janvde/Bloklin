@@ -18,7 +18,6 @@ object Bloklin {
              * add a genesis block to the chain with hardcoded data in it
              */
             val genesisBlock = Block(0, "0", "genesis data")
-            //val genesisBlock = Block(0, HashUtil.sha256("genesis block"), "genesis data", nonce = 1)
             blockChain.addBlock(genesisBlock)
         }
 
@@ -29,9 +28,6 @@ object Bloklin {
 
         val block = Block(lastBlockIndex + 1, previousHash, data)
         block.mine(dificulty)
-        /*val pow = proofOfWork(block)
-        block.nonce = pow
-        block.hash = block.calculateHash()*/
 
         blockChain.addBlock(block)
         return block

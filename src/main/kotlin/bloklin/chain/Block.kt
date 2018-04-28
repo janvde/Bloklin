@@ -25,16 +25,6 @@ class Block(index: Int, previousHash: String, data: Any) {
     fun calculateHash(): String = HashUtil.sha256("$index$previousHash$data$timeStamp$nonce")
 
     /**
-     * check if proof of a block is valid
-     * check if the block with a certain nonce results in a hash which ends with an amount of zeros
-     */
-    fun isValidProof(dificulty: Int): Boolean {
-        //println("isValidProof "+hash)
-        val suffix = DificultyUtil.getDificultyString(dificulty)
-        return (calculateHash().endsWith(suffix))
-    }
-
-    /**
      * simple proof of work mechanism
      * increases none until proof is valid
      */

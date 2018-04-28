@@ -1,7 +1,5 @@
 package bloklin.chain
 
-import bloklin.Bloklin
-
 class BlockChain(var chain: MutableList<Block> = mutableListOf()) {
 
 
@@ -47,15 +45,10 @@ class BlockChain(var chain: MutableList<Block> = mutableListOf()) {
      * 3. checking if the indexes are sequential
      */
     fun isBlockValid(block: Block): Boolean {
-        //println("isBlockValid "+block.toString())
+        if(!block.isValidHash()) return false
+
         //genesis block is always valid, but doesnt have a valid parent block
         if (block.isGenesisBlock()) return true
-
-        //check for valid proof
-        //todo where to get dificulty from
-        if (block.isValidProof(Bloklin.dificulty).not()) return false
-
-        if(!block.isValidHash()) return false
 
         val previousBlock = chain.get(block.index - 1)
 
