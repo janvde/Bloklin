@@ -27,10 +27,11 @@ class Block(index: Int, previousHash: String, data: Any) {
     /**
      * simple proof of work mechanism
      * increases none until proof is valid
+     * hash should start with an amount of zeros
      */
     fun mine(difficulty: Int) {
         val suffix = DificultyUtil.getDificultyString(difficulty)
-        while (!hash.endsWith(suffix)) {
+        while (!hash.startsWith(suffix)) {
             nonce++
             hash = calculateHash()
         }
@@ -44,6 +45,8 @@ class Block(index: Int, previousHash: String, data: Any) {
     fun isGenesisBlock(): Boolean {
         return index == 0
     }
+
+    fun getDificulty(): Int = DificultyUtil.getDificulty(hash)
 
     override fun toString(): String {
         return "Block(index=$index, previousHash='$previousHash', data=$data, timeStamp=$timeStamp, nonce=$nonce, hash='$hash')"

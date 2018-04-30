@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3f13d24-fd87-479c-b067-03801c54ddd7" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/bloklin/Params.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/bloklin/Bloklin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/bloklin/Bloklin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/bloklin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/bloklin/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/bloklin/Server.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/bloklin/Server.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/bloklin/chain/Block.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/bloklin/chain/Block.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/bloklin/chain/BlockChain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/bloklin/chain/BlockChain.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/bloklin/remote/NodeService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/bloklin/remote/NodeService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/bloklin/utils/DificultyUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/bloklin/utils/DificultyUtil.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/DificultyUtilTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/DificultyUtilTest.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -35,11 +43,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Server.kt" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Server.kt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/Server.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="562">
-                  <caret line="43" column="42" lean-forward="true" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
+                <state relative-caret-position="102">
+                  <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
                   <folding>
                     <element signature="e#16#673#0" expanded="true" />
                   </folding>
@@ -50,11 +58,50 @@
           <file leaf-file-name="Main.kt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/Main.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+                <state relative-caret-position="255">
+                  <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
                   <folding>
                     <element signature="e#17#133#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="BlockChain.kt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/chain/BlockChain.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DificultyUtil.kt" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/utils/DificultyUtil.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="715">
+                  <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
+                  <folding>
+                    <element signature="e#23#76#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="NodeExtensions.kt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/nodes/NodeExtensions.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="285">
+                  <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Params.kt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/Params.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
                 </state>
               </provider>
             </entry>
@@ -71,20 +118,11 @@
           <file leaf-file-name="Bloklin.kt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/Bloklin.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="495">
-                  <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+                <state relative-caret-position="44">
+                  <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
                   <folding>
                     <element signature="e#17#214#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="NodeExtensions.kt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/nodes/NodeExtensions.kt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -111,37 +149,14 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Block.kt" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Block.kt" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/chain/Block.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="24" column="93" selection-start-line="24" selection-start-column="93" selection-end-line="24" selection-end-column="93" />
+                <state relative-caret-position="465">
+                  <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
                   <folding>
                     <element signature="e#23#106#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/build.gradle">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="settings.gradle" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/settings.gradle">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
                 </state>
               </provider>
             </entry>
@@ -153,11 +168,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Kotlin Interface" />
-        <option value="Kotlin Class" />
         <option value="Singleton" />
         <option value="Kotlin Object" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -175,9 +190,13 @@
       <find>dificul</find>
       <find>Bloklin.</find>
       <find>BlockChain</find>
+      <find>zero</find>
+      <find>testDificulty</find>
+      <find>genesis</find>
     </findStrings>
     <replaceStrings>
       <replace>Node</replace>
+      <replace>testGetDificultyString</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/main/kotlin/bloklin</dir>
@@ -374,7 +393,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="6098335749000" />
+        <entry key="$PROJECT_DIR$" value="6099274443000" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
         <entry key="$PROJECT_DIR$/build.gradle" value="174154865" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2083459160" />
@@ -604,20 +623,23 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/BlockChain.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/remote/NodeService.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/nodes/NodesPool.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/DificultyUtilTest.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/remote/NodeServiceFactory.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/BlockChain.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/Block.java" />
         <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/Block.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/Main.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/Bloklin.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/chain/Block.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/chain/BlockChain.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/TamperingTest.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/remote/NodeService.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/Server.kt" />
         <option value="$PROJECT_DIR$/.circleci/config.yml" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/chain/Block.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/DificultyUtilTest.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/Bloklin.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/chain/BlockChain.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/Params.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/extensions/MathExtensions.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/Main.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/utils/DificultyUtil.kt" />
       </list>
     </option>
   </component>
@@ -685,6 +707,58 @@
               <item name="bloklin" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bloklin" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bloklin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bloklin" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="bloklin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bloklin" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bloklin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bloklin" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="bloklin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bloklin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bloklin" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="bloklin" type="462c0819:PsiDirectoryNode" />
+              <item name="nodes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bloklin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bloklin" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="bloklin" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bloklin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bloklin" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="bloklin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bloklin" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -880,8 +954,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.bloklin.MainKt" />
-        <item itemvalue="JUnit.TamperingTest" />
         <item itemvalue="JUnit.DificultyUtilTest" />
+        <item itemvalue="JUnit.TamperingTest" />
         <item itemvalue="JUnit.TamperingTest.testValid1" />
       </list>
     </recent_temporary>
@@ -912,18 +986,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TamperingTest - 2018.04.28 at 18h 09m 06s.xml">
-      <configuration name="TamperingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TamperingTest - 2018.04.28 at 18h 10m 27s.xml">
-      <configuration name="TamperingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TamperingTest - 2018.04.28 at 18h 11m 13s.xml">
-      <configuration name="TamperingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TamperingTest - 2018.04.28 at 18h 11m 23s.xml">
-      <configuration name="TamperingTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TamperingTest - 2018.04.28 at 18h 14m 04s.xml">
       <configuration name="TamperingTest" configurationId="JUnit" />
     </history-entry>
@@ -942,6 +1004,18 @@
     <history-entry file="TamperingTest - 2018.04.30 at 21h 00m 57s.xml">
       <configuration name="TamperingTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DificultyUtilTest - 2018.04.30 at 23h 11m 23s.xml">
+      <configuration name="DificultyUtilTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DificultyUtilTest - 2018.04.30 at 23h 11m 57s.xml">
+      <configuration name="DificultyUtilTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DificultyUtilTest - 2018.04.30 at 23h 12m 24s.xml">
+      <configuration name="DificultyUtilTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DificultyUtilTest - 2018.04.30 at 23h 12m 48s.xml">
+      <configuration name="DificultyUtilTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-2505" y="-619" width="2505" height="1417" extended-state="6" />
@@ -952,12 +1026,13 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5037924" side_tool="true" weight="0.46314222" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4962076" weight="0.2300819" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4962076" visible="true" weight="0.2300819" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3298585" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3298585" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3298585" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18842316" />
       <window_info anchor="bottom" id="Build" order="8" sideWeight="0.49952108" weight="0.329661" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4994012" weight="0.32911393" />
       <window_info anchor="right" id="Gradle" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -968,7 +1043,6 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4994012" weight="0.32911393" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -985,23 +1059,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/remote/NodeService.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/Server.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="55" column="93" selection-start-line="55" selection-start-column="93" selection-end-line="55" selection-end-column="93" />
-          <folding>
-            <element signature="e#16#673#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/BlockChain.kt" />
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/chain/Block.kt">
       <provider selected="true" editor-type-id="text-editor">
@@ -1168,13 +1225,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/utils/DificultyUtil.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.40/f30f4d822ac6c4ef7a72c86a11896aab1cdf3a2a/kotlin-stdlib-1.2.40-sources.jar!/generated/_Collections.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -1189,16 +1239,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/DificultyUtilTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#80#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gradlew">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1209,43 +1249,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/Bloklin.java" />
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/BlockChain.kt" />
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/Block.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/Main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          <folding>
-            <element signature="e#17#133#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/Bloklin.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
-          <folding>
-            <element signature="e#17#214#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/nodes/NodeExtensions.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/chain/Block.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="93" selection-start-line="24" selection-start-column="93" selection-end-line="24" selection-end-column="93" />
-          <folding>
-            <element signature="e#23#106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/TamperingTest.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-137">
@@ -1270,10 +1273,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/chain/BlockChain.kt">
+    <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1284,30 +1297,91 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/DificultyUtilTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/chain/Block.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+          <folding>
+            <element signature="e#23#106#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/chain/BlockChain.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/Params.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/Bloklin.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+          <folding>
+            <element signature="e#17#214#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/nodes/NodeExtensions.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/extensions/MathExtensions.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/Server.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="43" column="42" lean-forward="true" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
+        <state relative-caret-position="102">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#16#673#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/Main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="255">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding>
+            <element signature="e#17#133#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/utils/DificultyUtil.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="715">
+          <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
+          <folding>
+            <element signature="e#23#76#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

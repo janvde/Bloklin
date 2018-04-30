@@ -19,6 +19,13 @@ class BlockChain(var chain: MutableList<Block> = mutableListOf()) {
     }
 
     /**
+     * get a block at given index
+     */
+    fun getBlock(index: Int): Block? {
+        return chain.getOrNull(index)
+    }
+
+    /**
      * add a block to the chain
      */
     fun addBlock(block: Block) {
@@ -45,7 +52,7 @@ class BlockChain(var chain: MutableList<Block> = mutableListOf()) {
      * 3. checking if the indexes are sequential
      */
     fun isBlockValid(block: Block): Boolean {
-        if(!block.isValidHash()) return false
+        if (!block.isValidHash()) return false
 
         //genesis block is always valid, but doesnt have a valid parent block
         if (block.isGenesisBlock()) return true

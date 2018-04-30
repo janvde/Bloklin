@@ -5,11 +5,11 @@ import bloklin.chain.BlockChain
 import bloklin.nodes.Node
 import bloklin.nodes.NodesPool
 import bloklin.remote.NodeServiceFactory
+import bloklin.utils.DificultyUtil
 import io.reactivex.rxkotlin.subscribeBy
 
 object Bloklin {
     var blockChain: BlockChain = BlockChain()
-    val dificulty = 2
 
 
     fun mineBlock(data: Any): Block {
@@ -27,6 +27,8 @@ object Bloklin {
         val previousHash = lastBlock.hash
 
         val block = Block(lastBlockIndex + 1, previousHash, data)
+        val dificulty = DificultyUtil.calculateNextDificulty(blockChain)
+        println("dificulty: $dificulty")
         block.mine(dificulty)
 
         blockChain.addBlock(block)
