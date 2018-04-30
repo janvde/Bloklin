@@ -15,8 +15,6 @@ version '0.1'
 
 apply plugin: 'kotlin'
 
-mainClassName = 'bloklin.MainKt'
-
 defaultTasks 'run'
 
 sourceCompatibility = 1.8
