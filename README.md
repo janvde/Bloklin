@@ -1,3 +1,5 @@
+[![Build Status](https://www.bitrise.io/app/3c8226bda73e892c/status.svg?token=SILWN5WnF_feBgaThncE2w&branch=master)](https://www.bitrise.io/app/3c8226bda73e892c)
+
 # Bloklin
 A simple blockchain written in Kotlin
 
