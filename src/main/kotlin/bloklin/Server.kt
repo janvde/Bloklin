@@ -1,4 +1,5 @@
 package bloklin
+import bloklin.chain.Block
 import bloklin.nodes.Node
 import bloklin.nodes.NodesPool
 import com.google.gson.Gson
@@ -56,6 +57,18 @@ fun Application.module() {
 
             nodesPool.addNodes(body)
             call.respond(nodesPool.nodes)
+
+        }
+        //unsolicited block push
+        post("/chain/block") {
+            val jsonbody = call.receiveText()
+
+            val body = Gson().fromJson<Block>(jsonbody, Block::class.java)
+            if(body == null) call.respond(HttpStatusCode.fromValue(400), "provide a block")
+
+            //todo impl
+
+            call.respond(Bloklin.blockChain)
 
         }
     }

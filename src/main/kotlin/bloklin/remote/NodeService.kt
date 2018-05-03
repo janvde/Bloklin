@@ -1,5 +1,6 @@
 package bloklin.remote
 
+import bloklin.chain.Block
 import bloklin.chain.BlockChain
 import bloklin.nodes.Node
 import io.reactivex.Single
@@ -13,4 +14,10 @@ interface NodeService {
 
     @POST("/nodes/register")
     fun registerNodes(@Body nodes: List<Node>): Single<List<Node>>
+
+    @GET("/nodes/resolve")
+    fun resolveNodes(): Single<Void>
+
+    @POST("/chain/block")
+    fun pushBlock(@Body block: Block): Single<Void>
 }

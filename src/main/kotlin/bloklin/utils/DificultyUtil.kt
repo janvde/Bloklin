@@ -42,12 +42,13 @@ object DificultyUtil {
             val actualInterval = lastBlockTimeStamp - heightBlockTimeStamp
 
             //keep te adjustment within limits
-            var adjustment = expectedInterval / actualInterval
-            if (adjustment > 2) {
-                adjustment = 2
+            //todo refine this
+            var adjustment = expectedInterval.div(actualInterval)
+            if (adjustment > 2.0) {
+                adjustment = 3/2
             }
             if (adjustment < (1 / 2)) {
-                adjustment = 1 / 2
+                adjustment = 2/3
             }
 
 
