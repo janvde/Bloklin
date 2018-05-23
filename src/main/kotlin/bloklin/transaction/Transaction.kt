@@ -1,7 +1,7 @@
 package bloklin.transaction
 
+import bloklin.utils.HashUtil
 import java.security.PublicKey
-import java.security.Signature
 
 /**
  * https://blockgeeks.com/bitcoin-transactions/
@@ -20,7 +20,7 @@ class Transaction(
     //lock_time: this basically describes the earliest time at which a block can be added to the blockchain.
     // It is either the block height or a unix timestamp.
     var transactionHash: String? = null //hash of this transaction
-    val signature: Signature? = null
+    val signature: ByteArray? = null
 
     fun sign() {
 
@@ -31,7 +31,7 @@ class Transaction(
     }
 
     fun calculateHash(): String {
-        //todo
-        return ""
+        //todo should add more to prevent transactions from having the same hash
+        return HashUtil.sha256("${sender.encoded}${reciepient.encoded}${value.toString()}")
     }
 }
