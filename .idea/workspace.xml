@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3f13d24-fd87-479c-b067-03801c54ddd7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/bloklin/utils/SignatureUtil.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/bloklin/transaction/Transaction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/bloklin/transaction/Transaction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/bloklin/utils/SignatureUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/bloklin/utils/SignatureUtil.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -71,25 +70,25 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Transaction.kt" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Transaction.kt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/transaction/Transaction.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+                <state relative-caret-position="150">
+                  <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
                   <folding>
-                    <element signature="e#29#120#0" expanded="true" />
+                    <element signature="e#29#89#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="SignatureUtil.kt" pinned="false" current-in-tab="false">
+          <file leaf-file-name="SignatureUtil.kt" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/utils/SignatureUtil.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+                <state relative-caret-position="555">
+                  <caret line="37" column="68" selection-start-line="37" selection-start-column="68" selection-end-line="37" selection-end-column="68" />
                   <folding>
-                    <element signature="e#23#85#0" expanded="true" />
+                    <element signature="e#23#116#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -630,8 +629,8 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/transaction/TransactionInput.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/transaction/TransactionOutput.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/utils/SignatureUtil.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/transaction/Transaction.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/bloklin/utils/SignatureUtil.kt" />
       </list>
     </option>
   </component>
@@ -990,7 +989,14 @@
       <option name="project" value="LOCAL" />
       <updated>1525382998013</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="signature util with ecdsa signing function">
+      <created>1527105025562</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1527105025562</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1026,7 +1032,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2045" y="-166" width="1680" height="1027" extended-state="0" />
+    <frame x="-2069" y="-381" width="1680" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1060,7 +1066,8 @@
     <MESSAGE value="convert to gradle project" />
     <MESSAGE value="download chains of other nodes" />
     <MESSAGE value="setup transaction support" />
-    <option name="LAST_COMMIT_MESSAGE" value="setup transaction support" />
+    <MESSAGE value="signature util with ecdsa signing function" />
+    <option name="LAST_COMMIT_MESSAGE" value="signature util with ecdsa signing function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1381,22 +1388,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/utils/SignatureUtil.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/transaction/Transaction.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+        <state relative-caret-position="150">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding>
-            <element signature="e#23#85#0" expanded="true" />
+            <element signature="e#29#89#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/transaction/Transaction.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/bloklin/utils/SignatureUtil.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+        <state relative-caret-position="555">
+          <caret line="37" column="68" selection-start-line="37" selection-start-column="68" selection-end-line="37" selection-end-column="68" />
           <folding>
-            <element signature="e#29#120#0" expanded="true" />
+            <element signature="e#23#116#0" expanded="true" />
           </folding>
         </state>
       </provider>
