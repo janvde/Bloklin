@@ -1,28 +1,30 @@
 package bloklin.chain
 
+import bloklin.transaction.Transaction
 import bloklin.utils.DificultyUtil
 import bloklin.utils.HashUtil
 import java.util.*
+import kotlin.collections.ArrayList
 
-class Block(index: Int, previousHash: String, data: Any) {
+class Block(index: Int, previousHash: String, transactions: ArrayList<Transaction>) {
 
     var index: Int
     var hash: String
     var previousHash: String
-    var data: Any
+    var transactions: ArrayList<Transaction> = ArrayList()
     var timeStamp: Long = 0
     var nonce: Int = 1
 
     init {
         this.index = index
         this.previousHash = previousHash
-        this.data = data
+        this.transactions = transactions
         this.timeStamp = Date().getTime()
         this.hash = calculateHash() //Making sure we do this after we set the other values.
     }
 
     //calculate hash of this block
-    fun calculateHash(): String = HashUtil.sha256("$index$previousHash$data$timeStamp$nonce")
+    fun calculateHash(): String = HashUtil.sha256("$index$previousHash$transactions$timeStamp$nonce")
 
     /**
      * simple proof of work mechanism
@@ -37,6 +39,16 @@ class Block(index: Int, previousHash: String, data: Any) {
         }
     }
 
+
+    /**
+     * add a transaction to this block
+     */
+    fun addTransation(transaction: Transaction) {
+        transaction.process() //todo check output
+        transactions.add(transaction)
+
+    }
+
     fun isValidHash(): Boolean {
         return hash.equals(calculateHash())
     }
@@ -49,7 +61,7 @@ class Block(index: Int, previousHash: String, data: Any) {
     fun getDificulty(): Int = DificultyUtil.getDificulty(hash)
 
     override fun toString(): String {
-        return "Block(index=$index, previousHash='$previousHash', data=$data, timeStamp=$timeStamp, nonce=$nonce, hash='$hash')"
+        return "Block(index=$index, previousHash='$previousHash', transactions=$transactions, timeStamp=$timeStamp, nonce=$nonce, hash='$hash')"
     }
 
 }

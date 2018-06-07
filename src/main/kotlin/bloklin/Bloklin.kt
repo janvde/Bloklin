@@ -5,6 +5,7 @@ import bloklin.chain.BlockChain
 import bloklin.nodes.Node
 import bloklin.nodes.NodesPool
 import bloklin.remote.NodeServiceFactory
+import bloklin.transaction.Transaction
 import bloklin.utils.DificultyUtil
 import io.reactivex.rxkotlin.subscribeBy
 
@@ -12,12 +13,12 @@ object Bloklin {
     var blockChain: BlockChain = BlockChain()
 
 
-    fun mineBlock(data: Any): Block {
+    fun mineBlock(transactions: ArrayList<Transaction>): Block {
         if (blockChain.isEmpty()) {
             /**
              * add a genesis block to the chain with hardcoded data in it
              */
-            val genesisBlock = Block(0, "0", "genesis data")
+            val genesisBlock = Block(0, "0", ArrayList<Transaction>())
             blockChain.addBlock(genesisBlock)
         }
 
@@ -26,7 +27,7 @@ object Bloklin {
         val lastBlockIndex = lastBlock.index
         val previousHash = lastBlock.hash
 
-        val block = Block(lastBlockIndex + 1, previousHash, data)
+        val block = Block(lastBlockIndex + 1, previousHash, transactions)
         val dificulty = DificultyUtil.calculateNextDificulty(blockChain)
         println("dificulty: $dificulty")
         block.mine(dificulty)

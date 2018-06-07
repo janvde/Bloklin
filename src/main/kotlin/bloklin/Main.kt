@@ -17,7 +17,7 @@ fun main(args: Array<String>) {
 
     for (i in 1..2000) {
         //BlockChain.mineBlock("some data")
-        Bloklin.mineBlock("some datas")
+        Bloklin.mineBlock(ArrayList())
     }
 
     println("is chain valid: " + Bloklin.blockChain.isChainValid())

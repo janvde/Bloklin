@@ -37,7 +37,7 @@ fun Application.module() {
             call.respondText("Bloklin server", ContentType.Application.Json)
         }
         get("/mine") {
-            val block = Bloklin.mineBlock("data")
+            val block = Bloklin.mineBlock(ArrayList())
             call.respond(block)
         }
         get("/chain") {
