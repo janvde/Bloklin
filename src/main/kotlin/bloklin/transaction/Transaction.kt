@@ -10,7 +10,7 @@ import java.security.PublicKey
  */
 class Transaction(
         val sender: PublicKey,
-        val reciepient: PublicKey,
+        val recipient: PublicKey,
         val value: Float,
         val transactionInputs: List<TransactionInput> = emptyList()) {
 
@@ -34,8 +34,14 @@ class Transaction(
         signature = SignatureUtil.signWithECDSA(privateKey, message)
     }
 
-    fun verify() {
 
+    /**
+     * verify that the signature of this transaction is valid
+     */
+    fun isValidSignature() : Boolean {
+        if(signature == null) return false
+        val message = calculateHash()
+        return SignatureUtil.verifyECDSA(sender, message, signature!!)
     }
 
 
@@ -44,6 +50,8 @@ class Transaction(
      * return false if fails
      */
     fun process(): Boolean {
+        if(isValidSignature().not()) return false
+
         //get transaction inputs
         //check if transactions are valid
         //generate output transactions
@@ -52,6 +60,6 @@ class Transaction(
 
     fun calculateHash(): String {
         //todo should add more to prevent transactions from having the same hash
-        return HashUtil.sha256("${sender.encoded}${reciepient.encoded}${value.toString()}")
+        return HashUtil.sha256("${sender.encoded}${recipient.encoded}${value.toString()}")
     }
 }

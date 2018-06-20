@@ -44,8 +44,11 @@ class Block(index: Int, previousHash: String, transactions: ArrayList<Transactio
      * add a transaction to this block
      */
     fun addTransation(transaction: Transaction) {
-        transaction.process() //todo check output
-        transactions.add(transaction)
+        if (transaction.process()) {
+            transactions.add(transaction)
+        } else {
+            println("Failed to process transaction: $transaction")
+        }
 
     }
 
